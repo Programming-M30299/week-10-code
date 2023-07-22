@@ -1,40 +1,20 @@
-def sayHello():
-    print("Hello World")
+from graphics import *
 
 
-def sayHello2():
-    print("Hello")
-    print("World")
+def testPoint():
+    p = Point(100, 50)
+
+    print("p is of type:", type(p))  # Point
+
+    print("p's x coordinate is", p.getX())  # 100
+    print("p's y coordinate is", p.getY())  # 50
+
+    p.move(10, -20)
+
+    print("p's x coordinate is", p.getX())  # 110
+    print("p's y coordinate is", p.getY())  # 30
+
+    print("p is:", p)  # Point(110, 30)
 
 
-def sayBye():
-    print("Goodbye Mars")
-
-
-# TODO: Write `sayBye2` function here
-
-
-# A simple kilograms to ounces conversion program
-# It asks for a weight in kilograms (for example 10)
-# and converts it to ounces (352.74)
-def kilos2Ounces():
-    kilos = float(input("Enter a weight in kilograms: "))
-    ounces = kilos * 35.274
-    print("The weight in ounces is", ounces)
-
-
-def count():
-    for number in range(10):
-        print("Number is now: ", number)
-
-
-# A simple euros to pounds conversion program
-# It asks for a value in euros (for example 10)
-# and converts it to pounds (8.7)
-def euros2Pounds():
-    euros = float(input("Enter a value in euros: "))
-    pounds = euros * 0.87
-    print("The value in pounds is", pounds)
-
-
-# TODO: Write `dollars2Pounds` and the rest of your solutions for the programming exercises here
+testPoint()
