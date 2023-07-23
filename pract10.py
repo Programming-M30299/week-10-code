@@ -1,5 +1,9 @@
 from graphics import *
 
+class MyPoint:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
 
 def testPoint():
     p = Point(100, 50)
