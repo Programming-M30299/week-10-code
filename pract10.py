@@ -1,9 +1,23 @@
 from graphics import *
 
+
 class MyPoint:
     def __init__(self, x, y):
         self.x = x
         self.y = y
+
+    def getX(self):
+        return self.x
+
+    def getY(self):
+        return self.y
+
+
+def testMyPoint():
+    myPoint = MyPoint(100, 50)
+    print("myPoint's x coordinate is", myPoint.getX())  # 100
+    print("myPoint's y coordinate is", myPoint.getY())  # 50
+
 
 def testPoint():
     p = Point(100, 50)
@@ -21,4 +35,4 @@ def testPoint():
     print("p is:", p)  # Point(110.0, 30.0)
 
 
-testPoint()
+testMyPoint()
