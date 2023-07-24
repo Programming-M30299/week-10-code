@@ -15,6 +15,8 @@ class MyPoint:
 
 def testMyPoint():
     myPoint = MyPoint(100, 50)
+    print("myPoint's x coordinate is", myPoint.getX())  # 100
+    print("myPoint's y coordinate is", myPoint.getY())  # 50
 
 
 def testPoint():
@@ -31,6 +33,3 @@ def testPoint():
     print("p's y coordinate is", p.getY())  # 30.0
 
     print("p is:", p)  # Point(110.0, 30.0)
-
-
-testMyPoint()
