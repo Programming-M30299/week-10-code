@@ -22,6 +22,11 @@ def testMyPoint():
     print("myPoint's x coordinate is", myPoint.getX())  # 100
     print("myPoint's y coordinate is", myPoint.getY())  # 50
 
+    myPoint.move(10, -20)
+
+    print("myPoint's x coordinate is", myPoint.getX())  # 110
+    print("myPoint's y coordinate is", myPoint.getY())  # 30
+
 
 def testPoint():
     p = Point(100, 50)
