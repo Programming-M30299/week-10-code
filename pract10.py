@@ -12,6 +12,10 @@ class MyPoint:
     def getY(self):
         return self.y
 
+    def move(self, dx, dy):
+        self.x += dx
+        self.y += dy
+
 
 def testMyPoint():
     myPoint = MyPoint(100, 50)
