@@ -27,6 +27,9 @@ def testMyPoint():
     print("myPoint's x coordinate is", myPoint.getX())  # 110
     print("myPoint's y coordinate is", myPoint.getY())  # 30
 
+    # <__main__.MyPoint object at 0x7f9b1c0b6a90>
+    print("myPoint is:", myPoint)
+
 
 def testPoint():
     p = Point(100, 50)
