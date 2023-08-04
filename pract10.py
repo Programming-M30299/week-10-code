@@ -27,6 +27,15 @@ class Square():
         self.p2 = MyPoint(p1.getX() + side, p1.getY())
         self.side = side
 
+    def getP1(self):
+        return self.p1
+    
+    def getP2(self):
+        return self.p2
+    
+    def getSide(self):
+        return self.side
+
 
 def testMyPoint():
     myPoint = MyPoint(100, 50)
