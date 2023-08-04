@@ -21,7 +21,6 @@ class MyPoint:
         return output
 
 
-
 def testMyPoint():
     myPoint = MyPoint(100, 50)
     print("myPoint's x coordinate is", myPoint.getX())  # 100
