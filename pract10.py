@@ -16,6 +16,11 @@ class MyPoint:
         self.x += dx
         self.y += dy
 
+    def __str__(self):
+        output = "MyPoint({0}, {1})".format(self.x, self.y)
+        return output
+
+
 
 def testMyPoint():
     myPoint = MyPoint(100, 50)
