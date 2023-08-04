@@ -26,6 +26,7 @@ class Square():
         self.p1 = p1
         self.side = side
         self.p2 = MyPoint(p1.getX() + side, p1.getY() + side)
+        self.fillColour = "black"
 
     def getP1(self):
         return self.p1
@@ -43,6 +44,8 @@ class Square():
     def __str__(self):
         output = "Square({0}, {1})".format(self.p1, self.p2)
         return output
+    
+    
 
 
 def testMyPoint():
