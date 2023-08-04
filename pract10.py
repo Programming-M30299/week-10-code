@@ -40,6 +40,10 @@ class Square():
         self.p1.move(dx, dy)
         self.p2.move(dx, dy)
 
+    def __str__(self):
+        output = "Square({0}, {1})".format(self.p1, self.p2)
+        return output
+
 
 def testMyPoint():
     myPoint = MyPoint(100, 50)
@@ -77,8 +81,10 @@ def testSquare():
     print(square.getSide())  # 50
     print(square.getP1())  # MyPoint(100, 50)
     print(square.getP2())  # MyPoint(150, 100)
-    
+
     square.move(10, -20)
     print(square.getSide())  # 50
     print(square.getP1())  # MyPoint(110, 30)
     print(square.getP2())  # MyPoint(160, 80)
+
+    print(square)  # Square(MyPoint(110, 30), MyPoint(160, 80))
