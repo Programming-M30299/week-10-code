@@ -36,6 +36,10 @@ class Square():
     def getSide(self):
         return self.side
 
+    def move(self, dx, dy):
+        self.p1.move(dx, dy)
+        self.p2.move(dx, dy)
+
 
 def testMyPoint():
     myPoint = MyPoint(100, 50)
