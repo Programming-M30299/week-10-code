@@ -77,3 +77,6 @@ def testSquare():
     print(square.getSide())  # 50
     print(square.getP1())  # MyPoint(100, 50)
     print(square.getP2())  # MyPoint(150, 100)
+    square.move(10, -20)
+    print(square.getP1())  # MyPoint(110, 30)
+    print(square.getP2())  # MyPoint(160, 80)
