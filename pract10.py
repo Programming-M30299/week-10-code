@@ -21,6 +21,13 @@ class MyPoint:
         return output
 
 
+class Square():
+    def __init__(self, p1, side):
+        self.p1 = p1
+        self.p2 = MyPoint(p1.getX() + side, p1.getY())
+        self.side = side
+
+
 def testMyPoint():
     myPoint = MyPoint(100, 50)
     print("myPoint's x coordinate is", myPoint.getX())  # 100
