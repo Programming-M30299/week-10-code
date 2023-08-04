@@ -27,6 +27,15 @@ class Square():
         self.side = side
         self.p2 = MyPoint(p1.getX() + side, p1.getY() + side)
 
+    def getP1(self):
+        return self.p1
+
+    def getP2(self):
+        return self.p2
+
+    def getSide(self):
+        return self.side
+
 
 def testMyPoint():
     myPoint = MyPoint(100, 50)
@@ -56,3 +65,11 @@ def testPoint():
     print("p's y coordinate is", p.getY())  # 30.0
 
     print("p is:", p)  # Point(110.0, 30.0)
+
+
+def testSquare():
+    p1 = MyPoint(100, 50)
+    square = Square(p1, 50)
+    print(square.getSide())  # 50
+    print(square.getP1())  # MyPoint(100, 50)
+    print(square.getP2())  # MyPoint(150, 100)
