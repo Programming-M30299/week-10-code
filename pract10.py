@@ -94,3 +94,8 @@ def testSquare():
     print(square.getP2())  # MyPoint(160, 80)
 
     print(square)  # Square(MyPoint(110, 30), MyPoint(160, 80))
+
+    square.setFillColour("red")
+    print(square.fillColour)  # red
+    square.setFillColour("leopard print")
+    print(square.fillColour)  # red
