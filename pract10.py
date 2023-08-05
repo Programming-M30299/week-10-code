@@ -44,8 +44,11 @@ class Square():
     def __str__(self):
         output = "Square({0}, {1})".format(self.p1, self.p2)
         return output
-    
-    
+
+    def setFillColour(self, colour):
+        colours = ["red", "green", "blue", "yellow", "purple"]
+        if colour in colours:
+            self.fillColour = colour
 
 
 def testMyPoint():
