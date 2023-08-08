@@ -84,18 +84,21 @@ def testPoint():
 def testSquare():
     p1 = MyPoint(100, 50)
     square = Square(p1, 50)
-    print(square.getSide())  # 50
-    print(square.getP1())  # MyPoint(100, 50)
-    print(square.getP2())  # MyPoint(150, 100)
+    print("square's side length is", square.getSide())  # 50
+    print("square's p1 is", square.getP1())  # MyPoint(100, 50)
+    print("square's p2 is", square.getP2())  # MyPoint(150, 100)
 
     square.move(10, -20)
-    print(square.getSide())  # 50
-    print(square.getP1())  # MyPoint(110, 30)
-    print(square.getP2())  # MyPoint(160, 80)
+    print("After the move ...")
+    print("square's side length is", square.getSide())  # 50
+    print("square's p1 is", square.getP1())  # MyPoint(110, 30)
+    print("square's p2 is", square.getP2())  # MyPoint(160, 80)
 
     print(square)  # Square(MyPoint(110, 30), MyPoint(160, 80))
 
+    print("Changing square's fill colour to red")
     square.setFillColour("red")
-    print(square.fillColour)  # red
+    print("square's fill colour is", square.fillColour)  # red
+    print("Changing square's fill colour to leopard print!")
     square.setFillColour("leopard print")
-    print(square.fillColour)  # red
+    print("square's fill colour is", square.fillColour)  # red
