@@ -25,8 +25,9 @@ class Car:
             self.speed += 10
 
     def __str__(self):
-        output = "Car with number place {} is {} and is going {} mph".format(
-            self.numberPlate, self.colour, self.speed)
+        output = "Car with number place " + self.numberPlate
+        output += " is " + self.colour
+        output += " and is going " + str(self.speed) + " mph"
         return output
 
 
