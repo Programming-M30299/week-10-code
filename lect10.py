@@ -1,5 +1,4 @@
 class Car:
-    # Parameters go in here
     def __init__(self, colour, engineType):
         self.colour = colour
         self.engine = engineType
