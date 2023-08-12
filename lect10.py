@@ -1,11 +1,12 @@
 class Car:
-    def __init__(self, colour, numberPlate):
+    # Parameters go in here
+    def __init__(self, colour, engineType):
         self.colour = colour
-        self.numberPlate = numberPlate
+        self.engine = engineType
         self.speed = 0
 
-    def getNumberPlate(self):
-        return self.numberPlate
+    def getEngine(self):
+        return self.engine
 
     def getcolour(self):
         return self.colour
@@ -25,18 +26,18 @@ class Car:
             self.speed += 10
 
     def __str__(self):
-        output = "Car with number place " + self.numberPlate
-        output += " is " + self.colour
-        output += " and is going " + str(self.speed) + " mph"
+        output = "{} {} car ".format(self.colour, self.engine)
+        output += "traveling at {} mph".format(self.speed)
         return output
 
 
 def testCar():
-    myCar = Car("red", "ABC123")
+    myCar = Car("red", "electric")
+    print("My car's engine is", myCar.getEngine())
+    print("And it's colour is", myCar.getcolour())
 
-    print("My car is", myCar.getcolour())
     myCar.setColour("blue")
-    print("My car is now", myCar.getcolour())
+    print("My car's colour is now", myCar.getcolour())
 
     print("My car is going", myCar.getSpeed(), "mph")
     myCar.accelerate()
@@ -45,6 +46,3 @@ def testCar():
     print("After braking, my car's speed is", myCar.getSpeed(), "mph")
 
     print(myCar)
-
-
-testCar()
