@@ -1,7 +1,7 @@
 class Car:
-    def __init__(self, colour, engineType):
+    def __init__(self, colour, engine):
         self.colour = colour
-        self.engine = engineType
+        self.engine = engine
         self.speed = 0
 
     def getEngine(self):
