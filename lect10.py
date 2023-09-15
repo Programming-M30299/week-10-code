@@ -7,7 +7,7 @@ class Car:
     def getEngine(self):
         return self.engine
 
-    def getcolour(self):
+    def getColour(self):
         return self.colour
 
     def getSpeed(self):
@@ -33,10 +33,10 @@ class Car:
 def testCar():
     myCar = Car("red", "electric")
     print("My car's engine is", myCar.getEngine())
-    print("And it's colour is", myCar.getcolour())
+    print("And it's colour is", myCar.getColour())
 
     myCar.setColour("blue")
-    print("My car's colour is now", myCar.getcolour())
+    print("My car's colour is now", myCar.getColour())
 
     print("My car is going", myCar.getSpeed(), "mph")
     myCar.accelerate()
