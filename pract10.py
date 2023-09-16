@@ -61,8 +61,7 @@ def testMyPoint():
     print("myPoint's x coordinate is", myPoint.getX())  # 110
     print("myPoint's y coordinate is", myPoint.getY())  # 30
 
-    # <__main__.MyPoint object at 0x7f9b1c0b6a90>
-    print("myPoint is:", myPoint)
+    print("myPoint is:", myPoint)  # myPoint is: MyPoint(110, 30)
 
 
 def testPoint():
@@ -78,7 +77,7 @@ def testPoint():
     print("p's x coordinate is", p.getX())  # 110.0
     print("p's y coordinate is", p.getY())  # 30.0
 
-    print("p is:", p)  # Point(110.0, 30.0)
+    print("p is:", p)  # p is: Point(110.0, 30.0)
 
 
 def testSquare():
