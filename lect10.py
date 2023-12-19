@@ -26,7 +26,7 @@ class Car:
 
     def __str__(self):
         output = f"{self.colour} {self.engine} car"
-        output += f"traveling at {self.speed} mph"
+        output += f"travelling at {self.speed} mph"
         return output
 
 
