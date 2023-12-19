@@ -17,7 +17,7 @@ class MyPoint:
         self.y += dy
 
     def __str__(self):
-        output = "MyPoint({0}, {1})".format(self.x, self.y)
+        output = f"MyPoint({self.x}, {self.y})"
         return output
 
 
@@ -42,7 +42,7 @@ class Square():
         self.p2.move(dx, dy)
 
     def __str__(self):
-        output = "Square({0}, {1})".format(self.p1, self.p2)
+        output = f"Square({self.p1}, {self.p2})"
         return output
 
     def setFillColour(self, colour):
