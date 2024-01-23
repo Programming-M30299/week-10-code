@@ -2,6 +2,7 @@ from graphics import *
 
 
 class MyPoint:
+
     def __init__(self, x, y):
         self.x = x
         self.y = y
@@ -22,6 +23,7 @@ class MyPoint:
 
 
 class Square():
+
     def __init__(self, p1, side):
         self.p1 = p1
         self.side = side
