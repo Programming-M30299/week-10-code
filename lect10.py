@@ -1,48 +1,65 @@
 class Car:
 
-    def __init__(self, colour, engine):
+    def __init__(self, colour):
         self.colour = colour
-        self.engine = engine
-        self.speed = 0
-
-    def getEngine(self):
-        return self.engine
-
-    def getColour(self):
-        return self.colour
-
-    def getSpeed(self):
-        return self.speed
-
-    def setColour(self, colour):
-        if colour in ["red", "green", "blue", "yellow"]:
-            self.colour = colour
-
-    def brake(self):
         self.speed = 0
 
     def accelerate(self):
         if self.speed <= 60:
             self.speed += 10
 
+    def brake(self):
+        self.speed = 0
+
     def __str__(self):
-        output = f"{self.colour} {self.engine} car"
-        output += f"travelling at {self.speed} mph"
+        output = f"A {self.colour} car"
+        output += f" going at {self.speed} mph"
         return output
 
 
-def testCar():
-    myCar = Car("red", "electric")
-    print("My car's engine is", myCar.getEngine())
-    print("And it's colour is", myCar.getColour())
+def test_car():
+    my_car = Car("red")
 
-    myCar.setColour("blue")
-    print("My car's colour is now", myCar.getColour())
+    my_car.accelerate()
+    my_car.brake()
 
-    print("My car is going", myCar.getSpeed(), "mph")
-    myCar.accelerate()
-    print("My car is now going", myCar.getSpeed(), "mph")
-    myCar.brake()
-    print("After braking, my car's speed is", myCar.getSpeed(), "mph")
+    print(my_car.colour)  # red
+    print(my_car.speed)  # 0
 
-    print(myCar)
+    my_car.colour = "blue"
+    print(my_car.colour)  # blue
+
+    print(my_car)  # A blue car going at 0 mph
+
+
+class MyPoint:
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def move(self, dx, dy):
+        self.x += dx
+        self.y += dy
+
+    def __str__(self):
+        output = f"MyPoint({self.x}, {self.y})"
+        return output
+
+
+def test_my_point():
+    point_a = MyPoint(1, 2)
+    point_b = MyPoint(3, 4)
+
+    print(point_a.x)  # 1
+    print(point_b.y)  # 4
+
+    point_a.x = 5
+    print(point_a.x)  # 5
+
+    point_b.move(2, -2)
+    print(point_b.x)  # 5
+    print(point_b.y)  # 2
+
+    print("point_a:", point_a)  # MyPoint(5, 2)
+    print("point_b:", point_b)  # MyPoint(5, 2)
