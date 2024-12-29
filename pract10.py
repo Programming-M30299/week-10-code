@@ -1,4 +1,4 @@
-from graphics import *
+from graphix import *
 
 
 class MyPoint:
@@ -69,15 +69,15 @@ def testMyPoint():
 def testPoint():
     p = Point(100, 50)
 
-    print("p is of type:", type(p))  # <class 'graphics.Point'>
+    print("p is of type:", type(p)) # p is of type: <class 'graphix.Point'>
 
-    print("p's x coordinate is", p.getX())  # 100.0
-    print("p's y coordinate is", p.getY())  # 50.0
+    print("p's x coordinate is", p.x)  # 100.0
+    print("p's y coordinate is", p.y)  # 50.0
 
     p.move(10, -20)
 
-    print("p's x coordinate is", p.getX())  # 110.0
-    print("p's y coordinate is", p.getY())  # 30.0
+    print("p's x coordinate is", p.x)  # 110.0
+    print("p's y coordinate is", p.y)  # 30.0
 
     print("p is:", p)  # p is: Point(110.0, 30.0)
 
@@ -103,3 +103,6 @@ def testSquare():
     print("Changing square's fill colour to leopard print!")
     square.setFillColour("leopard print")
     print("square's fill colour is", square.fillColour)  # red
+
+
+testPoint()
