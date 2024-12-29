@@ -1,4 +1,4 @@
-from graphix import *
+from graphix import Point
 
 
 class MyPoint:
@@ -7,15 +7,9 @@ class MyPoint:
         self.x = x
         self.y = y
 
-    def getX(self):
-        return self.x
-
-    def getY(self):
-        return self.y
-
     def move(self, dx, dy):
-        self.x += dx
-        self.y += dy
+        self.x = self.x + dx
+        self.y = self.y + dy
 
     def __str__(self):
         output = f"MyPoint({self.x}, {self.y})"
@@ -27,17 +21,8 @@ class Square():
     def __init__(self, p1, side):
         self.p1 = p1
         self.side = side
-        self.p2 = MyPoint(p1.getX() + side, p1.getY() + side)
-        self.fillColour = "black"
-
-    def getP1(self):
-        return self.p1
-
-    def getP2(self):
-        return self.p2
-
-    def getSide(self):
-        return self.side
+        self.p2 = MyPoint(p1.x + side, p1.y + side)
+        self.fill_colour = "black"
 
     def move(self, dx, dy):
         self.p1.move(dx, dy)
@@ -47,29 +32,24 @@ class Square():
         output = f"Square({self.p1}, {self.p2})"
         return output
 
-    def setFillColour(self, colour):
-        colours = ["red", "green", "blue", "yellow", "purple"]
-        if colour in colours:
-            self.fillColour = colour
+
+def test_my_point():
+    my_point = MyPoint(100, 50)
+    print("my_point's x coordinate is", my_point.x)  # 100
+    print("my_point's y coordinate is", my_point.y)  # 50
+
+    my_point.move(10, -20)
+
+    print("my_point's x coordinate is", my_point.x)  # 110
+    print("my_point's y coordinate is", my_point.y)  # 30
+
+    print("my_point is:", my_point)  # my_point is: MyPoint(110, 30)
 
 
-def testMyPoint():
-    myPoint = MyPoint(100, 50)
-    print("myPoint's x coordinate is", myPoint.getX())  # 100
-    print("myPoint's y coordinate is", myPoint.getY())  # 50
-
-    myPoint.move(10, -20)
-
-    print("myPoint's x coordinate is", myPoint.getX())  # 110
-    print("myPoint's y coordinate is", myPoint.getY())  # 30
-
-    print("myPoint is:", myPoint)  # myPoint is: MyPoint(110, 30)
-
-
-def testPoint():
+def test_point():
     p = Point(100, 50)
 
-    print("p is of type:", type(p)) # p is of type: <class 'graphix.Point'>
+    print("p is of type:", type(p))  # p is of type: <class 'graphix.Point'>
 
     print("p's x coordinate is", p.x)  # 100.0
     print("p's y coordinate is", p.y)  # 50.0
@@ -82,27 +62,23 @@ def testPoint():
     print("p is:", p)  # p is: Point(110.0, 30.0)
 
 
-def testSquare():
+def test_square():
     p1 = MyPoint(100, 50)
     square = Square(p1, 50)
-    print("square's side length is", square.getSide())  # 50
-    print("square's p1 is", square.getP1())  # MyPoint(100, 50)
-    print("square's p2 is", square.getP2())  # MyPoint(150, 100)
+
+    print("square's side length is", square.side)  # 50
+    print("square's p1 is", square.p1)  # MyPoint(100, 50)
+    print("square's p2 is", square.p2)  # MyPoint(150, 100)
 
     square.move(10, -20)
+
     print("After the move ...")
-    print("square's side length is", square.getSide())  # 50
-    print("square's p1 is", square.getP1())  # MyPoint(110, 30)
-    print("square's p2 is", square.getP2())  # MyPoint(160, 80)
+    print("square's side length is", square.side)  # 50
+    print("square's p1 is", square.p1)  # MyPoint(110, 30)
+    print("square's p2 is", square.p2)  # MyPoint(160, 80)
 
     print(square)  # Square(MyPoint(110, 30), MyPoint(160, 80))
 
-    print("Changing square's fill colour to red")
-    square.setFillColour("red")
-    print("square's fill colour is", square.fillColour)  # red
-    print("Changing square's fill colour to leopard print!")
-    square.setFillColour("leopard print")
-    print("square's fill colour is", square.fillColour)  # red
-
-
-testPoint()
+    print("Changing square's fill colour default (black) to red ...")
+    square.fill_colour = "red"
+    print("square's fill colour is", square.fill_colour)  # red
