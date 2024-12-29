@@ -168,3 +168,4 @@ cython_debug/
 
 # Ignore the graphics module:
 graphics.py
+graphix.py
