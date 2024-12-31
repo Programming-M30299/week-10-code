@@ -35,12 +35,16 @@ class Square():
 
 
 def test_square():
-    p1 = MyPoint(100, 50)
-    square = Square(p1, 50)
+    p = MyPoint(100, 50)
+    square = Square(p, 50)
 
     print("square's side length is", square.side)  # 50
     print("square's p1 is", square.p1)  # MyPoint(100, 50)
     print("square's p2 is", square.p2)  # MyPoint(150, 100)
+
+    square.side = 100
+    print("After changing square's side length to 100 ...")
+    print("square's side length is", square.side)  # 100
 
     square.move(10, -20)
 
