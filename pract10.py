@@ -49,7 +49,7 @@ def test_square():
     square.move(10, -20)
 
     print("After the move ...")
-    print("square's side length is", square.side)  # 50
+    print("square's side length is", square.side)  # 100
     print("square's p1 is", square.p1)  # MyPoint(110, 30)
     print("square's p2 is", square.p2)  # MyPoint(160, 80)
 
