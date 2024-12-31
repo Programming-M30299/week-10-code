@@ -22,8 +22,6 @@ class Square():
         self.p1 = p1
         self.side = side
         self.p2 = MyPoint(p1.x + side, p1.y + side)
-        self.fill_colour = "white"
-        self.outline_colour = "black"
 
     def move(self, dx, dy):
         self.p1.move(dx, dy)
@@ -53,10 +51,6 @@ def test_square():
     print("square's p2 is", square.p2)  # MyPoint(160, 80)
 
     print(square)  # Square(MyPoint(110, 30), MyPoint(160, 80))
-
-    print("Changing square's fill colour default (white) to red ...")
-    square.fill_colour = "red"
-    print("square's fill colour is", square.fill_colour)  # red
 
 
 def test_my_point():
