@@ -47,7 +47,6 @@ def test_square():
     print("square's side length is", square.side)  # 100
 
     square.move(10, -20)
-
     print("After the move ...")
     print("square's side length is", square.side)  # 100
     print("square's p1 is", square.p1)  # MyPoint(110, 30)
