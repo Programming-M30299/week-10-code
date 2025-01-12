@@ -4,9 +4,9 @@ class Car:
         self.colour = colour
         self.speed = 0
 
-    def accelerate(self):
-        if self.speed <= 60:
-            self.speed += 10
+    def accelerate(self, value):
+        if self.speed + value <= 60:
+            self.speed = self.speed + value
 
     def brake(self):
         self.speed = 0
@@ -20,7 +20,7 @@ class Car:
 def test_car():
     my_car = Car("red")
 
-    my_car.accelerate()
+    my_car.accelerate(30)
     my_car.brake()
 
     print(my_car.colour)  # red
