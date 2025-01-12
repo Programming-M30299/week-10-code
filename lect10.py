@@ -6,7 +6,7 @@ class Car:
 
     def accelerate(self, value):
         if self.speed + value <= 60:
-            self.speed = self.speed + value
+            self.speed += value
 
     def brake(self):
         self.speed = 0
