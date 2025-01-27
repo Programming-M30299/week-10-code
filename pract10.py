@@ -27,8 +27,7 @@ class Square:
         self.p2.move(dx, dy)
 
     def __str__(self):
-        output = f"Square({self.p1}, {self.p2})"
-        return output
+        return f"Square({self.p1}, {self.p2})"
 
 
 def test_square():
