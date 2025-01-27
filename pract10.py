@@ -58,11 +58,6 @@ def test_my_point():
     print("my_point's x coordinate is", my_point.x)  # 100
     print("my_point's y coordinate is", my_point.y)  # 50
 
-    my_point.x = 200
-    my_point.y = my_point.y + 100
-    print("my_point's x coordinate is", my_point.x)  # 200
-    print("my_point's y coordinate is", my_point.y)  # 150
-
     my_point.move(10, -20)
     print("my_point's x coordinate is", my_point.x)  # 210
     print("my_point's y coordinate is", my_point.y)  # 130
