@@ -15,7 +15,7 @@ class MyPoint:
         return f"MyPoint({self.x}, {self.y})"
 
 
-class Square():
+class Square:
 
     def __init__(self, p1, side):
         self.p1 = p1
