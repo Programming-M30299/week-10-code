@@ -12,8 +12,7 @@ class MyPoint:
         self.y += dy
 
     def __str__(self):
-        output = f"MyPoint({self.x}, {self.y})"
-        return output
+        return f"MyPoint({self.x}, {self.y})"
 
 
 class Square():
