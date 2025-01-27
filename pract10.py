@@ -76,11 +76,6 @@ def test_point():
     print("p's x coordinate is", p.x)  # 100
     print("p's y coordinate is", p.y)  # 50
 
-    p.x = 200
-    p.y = p.y + 100
-    print("p's x coordinate is", p.x)  # 200
-    print("p's y coordinate is", p.y)  # 150
-
     p.move(10, -20)
     print("p's x coordinate is", p.x)  # 210
     print("p's y coordinate is", p.y)  # 130
