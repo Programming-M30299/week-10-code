@@ -57,10 +57,10 @@ def test_my_point():
     print("my_point's y coordinate is", my_point.y)  # 50
 
     my_point.move(10, -20)
-    print("my_point's x coordinate is", my_point.x)  # 210
-    print("my_point's y coordinate is", my_point.y)  # 130
+    print("my_point's x coordinate is", my_point.x)  # 110
+    print("my_point's y coordinate is", my_point.y)  # 30
 
-    print("my_point is:", my_point)  # my_point is: MyPoint(210, 130)
+    print("my_point is:", my_point)  # my_point is: MyPoint(110, 30)
 
 
 def test_point():
@@ -70,7 +70,7 @@ def test_point():
     print("p's y coordinate is", p.y)  # 50
 
     p.move(10, -20)
-    print("p's x coordinate is", p.x)  # 210
-    print("p's y coordinate is", p.y)  # 130
+    print("p's x coordinate is", p.x)  # 110
+    print("p's y coordinate is", p.y)  # 30
 
-    print("p is:", p)  # p is: Point(210, 130)
+    print("p is:", p)  # p is: Point(110, 30)
